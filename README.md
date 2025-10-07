@@ -1,40 +1,32 @@
-# Tienda de Computadoras con PHP y Tailwind CSS
 
-Una aplicación web simple para la venta de computadoras, con un panel de administración para gestionar productos.
+## 🗄️ Diseño de la Base de Datos
 
-## Características
+La aplicación utiliza tres tablas principales:
 
-- **Catálogo de Productos:** Vista pública de todos los productos en una cuadrícula responsive.
-- **Detalles del Producto:** Página individual para cada producto con su descripción completa.
-- **Panel de Administración:**
-  - Login simple para el administrador.
-  - Añadir nuevos productos con imagen.
-  - Eliminar productos existentes.
-  - Listado de todos los productos.
-- **Diseño Profesional:** Interfaz moderna y responsive construida con Tailwind CSS.
-- **Base de Datos Relacional:** Uso de MySQL con tablas de `productos` y `categorias`.
+- **`categorias`**: Almacena los tipos de productos (Laptops, Desktops, etc.).
+- **`productos`**: Almacena la información de cada computadora y se relaciona con `categorias` a través de una clave foránea.
+- **`usuarios`**: Almacena la información de los clientes registrados, con contraseñas hasheadas de forma segura.
 
-## Requisitos
+## 🛠️ Tecnologías Utilizadas
 
-- XAMPP (o un servidor web local con Apache, PHP y MySQL).
-- Un navegador web moderno.
+- **Backend:** PHP
+- **Frontend:** HTML5, CSS3 (Tailwind CSS), JavaScript
+- **Base de Datos:** MySQL
+- **Servidor:** Apache (vía XAMPP)
 
-## Instalación y Configuración
+## 🚀 Mejoras Futuras
 
-1.  **Clonar o Descargar:** Coloca los archivos del proyecto en la carpeta `htdocs` de tu instalación de XAMPP (ej: `C:/xampp/htdocs/tienda-pc`).
+- [ ] Implementar un sistema de búsqueda y filtrado de productos.
+- [ ] Desarrollar un historial de pedidos para los usuarios.
+- [ ] Integrar una pasarela de pago real (Stripe, PayPal).
+- [ ] Añadir un sistema de reseñas y valoraciones de productos.
+- [ ] Compilar Tailwind CSS para producción en lugar de usar el CDN.
+- [ ] Implementar pruebas unitarias (PHPUnit).
 
-2.  **Base de Datos:**
-    - Inicia Apache y MySQL desde el panel de control de XAMPP.
-    - Abre tu navegador y ve a `http://localhost/phpmyadmin`.
-    - Crea una nueva base de datos llamada `tienda_computadoras`.
-    - Selecciona la base de datos, ve a la pestaña "SQL" y pega el contenido del script SQL proporcionado en la documentación para crear las tablas e insertar datos de ejemplo.
+## 🤝 Contributing
 
-3.  **Permisos:** Asegúrate de que la carpeta `uploads` exista dentro de `tienda-pc` y que el servidor web tenga permisos para escribir en ella.
+Las solicitudes de extracción son bienvenidas. Para cambios importantes, abra un problema primero para discutir lo que le gustaría cambiar.
 
-4.  **Acceder a la Aplicación:**
-    - **Tienda Pública:** Abre `http://localhost/tienda-pc/` en tu navegador.
-    - **Panel de Administración:** Ve a `http://localhost/tienda-pc/admin/login.php`.
-      - **Usuario:** `admin`
-      - **Contraseña:** `password123`
+## 📝 Licencia
 
-## Estructura de Archivos
+Este proyecto está bajo la Licencia MIT. Consulta el archivo `LICENSE` para obtener más detalles.
